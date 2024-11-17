@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcriptor de Audio IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transcriptor de Audio IA</h1>
+        </header>
+
+        <section id="menu" class="menu">
+            <div class="file-upload">
+                <input type="file" id="audioInput" accept="audio/*">
+                <label for="audioInput" class="file-label">📂 Cargar archivo de audio</label>
+            </div>
+            <div class="controls">
+                <button id="transcribeButton" class="button primary">📝 Transcribir</button>
+                <button id="clearButton" class="button secondary">🗑️ Limpiar</button>
+                <button id="downloadPdfButton" class="button primary">📄 Descargar PDF</button>
+            </div>
+        </section>
+
+        <section class="progress-bar">
+            <div id="progress" class="progress"></div>
+            <div id="semaforo" class="semaforo">Evaluación pendiente...</div>
+        </section>
+
+        <section class="results">
+            <div id="resultado" class="output">Esperando transcripción...</div>
+            <div id="kpiContainer" class="kpi-container">
+                <div id="totalTimeKPI" class="kpi">⏳ Tiempo Total: 0s</div>
+                <div id="asesorTimeKPI" class="kpi">💼 Tiempo Asesor: 0s</div>
+                <div id="clienteTimeKPI" class="kpi">👤 Tiempo Cliente: 0s</div>
+            </div>
+
+            <div id="chartContainer">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </section>
+
+        <section id="chatBox" class="chat-box"></section>
+        <section id="recomendaciones" class="output">Recomendaciones: </section>
+    </div>
+
+    <!-- Librerías necesarias -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
