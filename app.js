@@ -195,12 +195,13 @@ document.getElementById('sortByDate').addEventListener('click', () => {
 
 // Limpiar los filtros
 document.getElementById('clearFilters').addEventListener('click', () => {
-    // Restablecer los valores de los filtros
+    // Restablecer los valores de los filtros a su estado inicial
     document.getElementById('dateFrom').value = '';
     document.getElementById('dateTo').value = '';
     document.getElementById('sentiment').value = 'all';
 
-    // Mostrar todas las publicaciones
+    // Restablecer las publicaciones a todas las disponibles
+    filteredPosts = [];
     mostrarPublicaciones(allPosts);
 });
 
