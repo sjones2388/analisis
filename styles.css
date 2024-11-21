@@ -1,202 +1,179 @@
-/* Estilos generales */
-* {
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-    background-color: #0a0e27;
-    color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .container {
-    width: 100%;
-    max-width: 700px;
-    background: #141b2d;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-/* Encabezado */
-header h1 {
-    text-align: center;
-    color: #00aaff;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* Menú */
-.menu {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Cargador de archivos */
-.file-upload {
-    display: flex;
-    justify-content: center;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.file-label {
-    background-color: #007acc;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.file-label:hover {
-    background-color: #005fa3;
-    transform: scale(1.05);
-}
-
-/* Botones */
-.controls {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.button {
-    flex: 1;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.primary {
-    background-color: #1e90ff;
-}
-
-.secondary {
-    background-color: #e63946;
-}
-
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Barra de progreso */
-.progress-bar {
-    width: 100%;
-    height: 12px;
-    background-color: #1f253a;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.progress {
-    height: 100%;
-    width: 0;
-    background-color: #00aaff;
-    transition: width 0.3s;
-    border-radius: 6px;
-}
-
-/* Resultados */
-.results {
-    text-align: center;
-}
-
-.output {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #1b2338;
-    border-radius: 8px;
-    color: #e0e0e0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* KPIs */
-.kpi-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.kpi {
-    font-weight: 600;
-    color: #00aaff;
-    background-color: #141b2d;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Contenedor del gráfico */
-#chartContainer {
-    width: 100%;
-    max-width: 600px;
-    height: 300px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
-    background-color: #1b2338;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
 
-canvas {
-    max-width: 100%;
-    height: 100%;
-    display: block;
-}
-
-/* Caja de chat */
-.chat-box {
+.header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FFC107);
     padding: 15px;
-    background-color: #1b2338;
     border-radius: 8px;
-    min-height: 100px;
-    max-height: 250px;
-    overflow-y: auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: white;
 }
 
-/* Semáforo */
-.semaforo {
+.instagram-logo {
+    width: 70px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.filters {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #833AB4;
+}
+
+.filters label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.filters input, .filters select {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.filters .btn {
+    font-size: 18px;
+    background-color: #833AB4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filters .btn:hover {
+    background-color: #FD1D1D;
+}
+
+/* Publicaciones */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 publicaciones por fila */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out; /* Para suavizar la transición del halo */
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para los videos */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal para video */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 50px;
-    margin-top: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #1e90ff;
+    z-index: 999;
 }
 
-/* Recomendaciones */
-#recomendaciones {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #1b2338;
-    border-radius: 5px;
-    color: #e0e0e0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.video-modal .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: #fff;
+    padding: 20px;
+}
+
+.video-modal video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #833AB4;
+    color: white;
+    border-radius: 8px;
 }
