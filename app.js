@@ -193,5 +193,16 @@ document.getElementById('sortByDate').addEventListener('click', () => {
     mostrarPublicaciones(publicacionesFiltradas);
 });
 
+// Limpiar los filtros
+document.getElementById('clearFilters').addEventListener('click', () => {
+    // Restablecer los valores de los filtros
+    document.getElementById('dateFrom').value = '';
+    document.getElementById('dateTo').value = '';
+    document.getElementById('sentiment').value = 'all';
+
+    // Mostrar todas las publicaciones
+    mostrarPublicaciones(allPosts);
+});
+
 // Cargar los datos al inicio
 cargarDatos();
